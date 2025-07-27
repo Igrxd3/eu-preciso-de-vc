@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Uma mensagem de amor</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #ffe6e6;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+      flex-direction: column;
+      color: #d6336c;
+    }
+
+    h1 {
+      font-size: 3em;
+      animation: pulse 2s infinite;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); color: #ff3366; }
+    }
+
+    .heart {
+      width: 100px;
+      height: 90px;
+      position: relative;
+      transform: rotate(-45deg);
+      animation: beat 1s infinite;
+      margin-bottom: 20px;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      width: 100px;
+      height: 90px;
+      background: #d6336c;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .heart::before {
+      top: 0;
+      left: 0;
+    }
+
+    .heart::after {
+      top: 0;
+      right: 0;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1) rotate(-45deg); }
+      50% { transform: scale(1.2) rotate(-45deg); }
+    }
+
+    p {
+      font-size: 1.5em;
+      max-width: 400px;
+      text-align: center;
+      line-height: 1.4;
+      color: #b32448;
+    }
+  </style>
+</head>
+<body>
+  <div class="heart"></div>
+  <h1>Eu te amo ❤️</h1>
+  <p>Vc fez meu coração bater engraçado, me recuso a viver sem vc ao meu lado.</p>
+</body>
+</html>
+Adiciona animação de amor
